@@ -154,11 +154,13 @@
     let travelers = new Array<Traveler>(traveler1,traveler2, traveler3, traveler4, traveler5);
 
     for (let i = 0; i < travelers.length; i++) {
+        if ((Math.random() * 10) <= 5) {
         wagon.addPassenger(travelers[i]);
         }
+        }
     
-    console.log("wagon is quantined = " + wagon.isQuarantined());
-    console.log("Passengers of the wagon have a total of " +  wagon.getFood() + " food." )
+    console.log("Wagon is quantined = " + wagon.isQuarantined());
+    console.log("Passengers of the wagon have a total of " +  wagon.getFood() + " food." );
   
 
 

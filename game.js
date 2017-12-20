@@ -81,10 +81,12 @@
     console.log(traveler4.name + " is healthy = " + traveler2.eat());
     console.log(traveler5.name + " is healthy = " + traveler5.eat());
     var travelers = new Array(traveler1, traveler2, traveler3, traveler4, traveler5);
-    for (var i = 0; i < 5; i++) {
-        wagon.addPassenger(travelers[i]);
+    for (var i = 0; i < travelers.length; i++) {
+        if ((Math.random() * 10) <= 5) {
+            wagon.addPassenger(travelers[i]);
+        }
     }
-    console.log("wagon is quantined = " + wagon.isQuarantined());
+    console.log("Wagon is quantined = " + wagon.isQuarantined());
     console.log("Passengers of the wagon have a total of " + wagon.getFood() + " food.");
     /*
     * Play the game
