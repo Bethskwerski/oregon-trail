@@ -155,7 +155,10 @@
 
     for (let i = 0; i < travelers.length; i++) {
         if ((Math.random() * 10) <= 5) {
-        wagon.addPassenger(travelers[i]);
+        console.log("The wagon Master told " +travelers[i].name + " they were " + wagon.addPassenger(travelers[i]));
+        }
+        else{
+        console.log(travelers[i].name + " missed the wagon!");
         }
         }
     

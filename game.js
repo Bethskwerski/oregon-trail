@@ -83,7 +83,10 @@
     var travelers = new Array(traveler1, traveler2, traveler3, traveler4, traveler5);
     for (var i = 0; i < travelers.length; i++) {
         if ((Math.random() * 10) <= 5) {
-            wagon.addPassenger(travelers[i]);
+            console.log("The wagon Master told " + travelers[i].name + " they were " + wagon.addPassenger(travelers[i]));
+        }
+        else {
+            console.log(travelers[i].name + " missed the wagon!");
         }
     }
     console.log("Wagon is quantined = " + wagon.isQuarantined());
